@@ -1,0 +1,18 @@
+{
+    "require": {
+        "php": ">=7.2",
+        "webonyx/graphql-php": "^0.11.5",
+        "overblog/dataloader-php": "^0.5.2",
+        "cweagans/composer-patches": "^1.6"
+    },
+    "extra": {
+        "patches": {
+            "webonyx/graphql-php": {
+                "adapter-fix": "./patches/graphql-php_custom-adapter-fix.patch"
+            }
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    }
+}

@@ -1,0 +1,13 @@
+diff --git a/vendor/webonyx/graphql-php/src/GraphQL.php.org b/vendor/webonyx/graphql-php/src/GraphQL.php
+index 4a5933d..cdd204a 100755
+--- a/vendor/webonyx/graphql-php/src/GraphQL.php.org
++++ b/vendor/webonyx/graphql-php/src/GraphQL.php
+@@ -80,7 +80,7 @@ class GraphQL
+         array $validationRules = null
+     )
+     {
+-        $promiseAdapter = new SyncPromiseAdapter();
++        $promiseAdapter = Executor::getPromiseAdapter();
+ 
+         $promise = self::promiseToExecute($promiseAdapter, $schema, $source, $rootValue, $context,
+             $variableValues, $operationName, $fieldResolver, $validationRules);
